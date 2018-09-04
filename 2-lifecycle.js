@@ -10,10 +10,6 @@ class App extends Component {
         };
     }
 
-    componentWillUnmount() {
-        clearInterval(this.timerID);
-    }
-
     componentDidMount() {
         this.timerID = setInterval(() => this.setState({date: new Date()}), 1000);
     }
@@ -22,12 +18,8 @@ class App extends Component {
         // console.log('Now will be TICK!');
     }
 
-    componentDidUpdate(){
-        // console.log('Tick!');
-    }
-
     componentDidUpdate(prevProps, prevState) {
-        // console.log(prevProps, prevState);
+        console.log(prevProps, prevState);
     }
 
     buttonHandler(event){
