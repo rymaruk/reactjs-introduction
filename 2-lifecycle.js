@@ -14,12 +14,17 @@ class App extends Component {
         this.timerID = setInterval(() => this.setState({date: new Date()}), 1000);
     }
 
+    componentWillUnmount() {
+        // clearInterval(this.timerID);
+        console.log('Component an unmounted!')
+    }
+
     componentWillUpdate(){
         // console.log('Now will be TICK!');
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log(prevProps, prevState);
+        // console.log(prevProps, prevState);
     }
 
     buttonHandler(event){
