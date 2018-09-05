@@ -5,8 +5,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: new Date(),
-            age: 21,
+            date: new Date()
         };
     }
 
@@ -16,27 +15,26 @@ class App extends Component {
 
     componentWillUnmount() {
         // clearInterval(this.timerID);
-        console.log('Component an unmounted!')
+        console.log('An unmounted!')
     }
 
     componentWillUpdate(){
-        // console.log('Now will be TICK!');
+        // console.log('componentWillUpdate');
     }
 
     componentDidUpdate(prevProps, prevState) {
         // console.log(prevProps, prevState);
     }
 
-    buttonHandler(event){
-        this.setState({age: event.target.value});
-    }
-
     render() {
         return (
-            <div>
-                <h1>My name is, {this.props.name}! I'm {this.state.age} years old!</h1>
-                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-                <input type={'number'} onChange={this.buttonHandler.bind(this)} />
+            <div className="shadow-sm p-3 mb-5 bg-white rounded">
+
+                <div className="card">
+                    <h4 className='card-header'><span className="badge badge-primary">{this.state.date.toLocaleTimeString()}</span></h4>
+                    <div className="card-body"></div>
+                </div>
+
             </div>
         );
     }
