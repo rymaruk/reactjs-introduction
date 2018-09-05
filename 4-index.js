@@ -45,7 +45,7 @@ class Index extends React.Component {
                     </div>
 
                     <div className="col-12">
-                        {this.state.statusSomeChecked && <App name={'Contact form'} /> }
+                        {this.state.statusSomeChecked && <App email={'contact@gmail.com'} /> }
                     </div>
 
                 </div>
