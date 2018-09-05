@@ -15,9 +15,9 @@ class Index extends React.Component {
             <div className={'container'}>
 
                 <div className="row">
-            
+
                     <div className="col-12">
-                        <App name={'Contact form'} />
+                        <App name={'Time'} />
                     </div>
 
                 </div>
