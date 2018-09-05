@@ -2,31 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 class Index extends React.Component {
+
     constructor(props) {
         super(props);
-        this.state = {
-            statusSomeChecked: true
-        };
-
-    }
-
-    handlerToggle(){
-        this.setState({statusSomeChecked: !this.state.statusSomeChecked});
     }
 
     render() {
         return (
-            <div>
-                <label>
-                    <input
-                        type="checkbox"
-                        defaultChecked={this.state.statusSomeChecked}
-                        onChange={this.handlerToggle.bind(this)}
-                    />
-                    Trigger show
-                </label>
-                {this.state.statusSomeChecked && <App name={'User name'} /> }
+            <div className={'container'}>
+
+                <div className="row">
+            
+                    <div className="col-12">
+                        <App name={'Contact form'} />
+                    </div>
+
+                </div>
+
             </div>
         );
     }
