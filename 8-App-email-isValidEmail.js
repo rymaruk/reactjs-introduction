@@ -30,14 +30,6 @@ class App extends Component {
         console.log('An unmounted!')
     }
 
-    componentWillUpdate(){
-        // console.log('componentWillUpdate!');
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        // console.log(prevProps, prevState);
-    }
-
     fieldHandler(event){
         const fieldName = event.target.name;
         const fieldValue = event.target.value;
