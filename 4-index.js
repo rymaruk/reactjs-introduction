@@ -31,7 +31,6 @@ class Index extends React.Component {
 
                             <input type="checkbox"
                                    defaultChecked={this.state.statusSomeChecked}
-                                   ref={'fieldSomeChecked'}
                                    onChange={this.handlerToggle.bind(this)}
                                    className="custom-control-input"
                                    id="trigger"
